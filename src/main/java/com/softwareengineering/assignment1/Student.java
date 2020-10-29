@@ -17,45 +17,40 @@ import org.joda.time.*;
 public class Student {
     
     // Initialising variables 
-    private String name;
-    private int age;
-    private LocalDate dateOfBirth;
+    private final String name;
+    private final int age;
+    private final LocalDate dateOfBirth;
     private int ID;
     private String username;
     private CourseProgramme registeredCourse;
     private List<Module> modules = new ArrayList<Module>();  
     
-    public Student(String name, int day, int month, int year, CourseProgramme course){
+    public Student(String name, int id, int day, int month, int year, CourseProgramme course){
         this.name = name;
-        // TO CHECK AND CHANGE 
+        this.ID = id;
         this.dateOfBirth = new LocalDate(year, month, day);
         this.age = setAge();
         this.registeredCourse = course;
-        // CHANGE
-        registerCourse();
+        registerToCourse();
     }
     
-    // CHANGE 
+    // Calcuating Current Age of Student using Joda-Time
     private int setAge() {
         LocalDate currentAge = new LocalDate();
         currentAge = dateOfBirth.minusYears(currentAge.getYear());
         return currentAge.getYear();
     }
     
-    // CHECK HOW TO DO EMPLOYEE NUMBER IN PREVIOUS ASSIGNMENTS 
-    
     // Student Username is the concatenation of Name and Age
     public String getUsername() {
         username = name + Integer.toString(age);
         return username;
     }
-    
-    // CHANGE
-    private void registerCourse() {
+
+    private void registerToCourse() {
         modules = this.registeredCourse.getModuleList();
         this.registeredCourse.addStudentToCourse(this);
     }
-    
     
     // Getter Methods
     public String getStudentName() {
@@ -76,5 +71,9 @@ public class Student {
     
     public List<Module> getModules() {
         return modules;
+    }
+    
+    public int getID() {
+        return ID;
     }
 }

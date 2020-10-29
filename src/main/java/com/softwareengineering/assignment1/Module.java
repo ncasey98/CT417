@@ -13,13 +13,11 @@ import java.util.List;
  * @author noracasey
  */
 
-// module name, id, list of students, courses it's associated with 
-
 public class Module {
-    private String moduleName;
-    private String moduleID;
-    private List<Student> enrolledStudents = new ArrayList<Student>();
-    private List<CourseProgramme> associatedCourses = new ArrayList<CourseProgramme>();
+    private final String moduleName;
+    private final String moduleID;
+    private final List<Student> enrolledStudents = new ArrayList<Student>();
+    private final List<CourseProgramme> associatedCourses = new ArrayList<CourseProgramme>();
     
     private Module(String moduleName, String moduleID) {
         this.moduleName = moduleName;
@@ -34,6 +32,7 @@ public class Module {
         this.enrolledStudents.add(student);
     }
     
+    // Getter Methods
     public String getModuleName() {
         return moduleName;
     }

@@ -13,13 +13,12 @@ import org.joda.time.LocalDate;
  * @author noracasey
  */
 
-// course name, list of modules, list of students enrolled, academic start date and end date
 public class CourseProgramme {
-    private String courseName;
-    private List<Module> modules = new ArrayList<Module>();
-    private List<Student> enrolledStudents = new ArrayList<Student>();
-    private LocalDate startDate;
-    private LocalDate endDate;
+    private final String courseName;
+    private final List<Module> modules = new ArrayList<Module>();
+    private final List<Student> enrolledStudents = new ArrayList<Student>();
+    private final LocalDate startDate;
+    private final LocalDate endDate;
     
     public CourseProgramme(String courseName, int startDay, int startMonth, int startYear, int endDay, int endMonth, int endYear) {
         this.courseName = courseName;
