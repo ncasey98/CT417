@@ -19,7 +19,7 @@ public class Module {
     private final List<Student> enrolledStudents = new ArrayList<Student>();
     private final List<CourseProgramme> associatedCourses = new ArrayList<CourseProgramme>();
     
-    private Module(String moduleName, String moduleID) {
+    public Module(String moduleName, String moduleID) {
         this.moduleName = moduleName;
         this.moduleID = moduleID;
     }

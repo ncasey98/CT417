@@ -12,9 +12,15 @@
             <version>2.10.8</version>
         </dependency>
         <dependency>
-            <groupId>com.github.ncasey98</groupId>
-            <artifactId>Repo</artifactId>
-            <version>Tag</version>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13</version>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-joda-time</artifactId>
+            <version>2.2.0</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
     <properties>
