@@ -1,0 +1,11 @@
+# Language Settings
+language: java
+
+# Which branches get built
+branches:
+  only:
+    - master
+
+build:
+  ci:
+    - mvn test
