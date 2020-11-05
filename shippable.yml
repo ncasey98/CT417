@@ -1,0 +1,13 @@
+# Language Settings
+language: java
+
+# Control what branches get build
+branches:
+  only:
+    - master
+    
+# workflows:
+  build_and_test:
+    jobs:
+      - build
+      - test
